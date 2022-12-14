@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tabGravity="fill"
         app:tabMode="fixed"
+
         app:tabSelectedTextColor="@android:color/holo_orange_light"
         app:tabRippleColor="@android:color/holo_orange_light"
         app:tabTextColor="@color/white">

@@ -39,16 +39,6 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
 
     private fun setupRecyclerView() {
         binding.rvAnime.adapter = animeAdapter
-
-        binding.rvAnime.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                if (!recyclerView.canScrollVertically(1)) {
-                    offset += 1
-                    subscribeToManga()
-                }
-            }
-        })
     }
 
     private fun subscribeToManga() {

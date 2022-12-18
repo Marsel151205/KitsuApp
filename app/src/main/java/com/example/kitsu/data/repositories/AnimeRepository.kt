@@ -16,4 +16,8 @@ class AnimeRepository @Inject constructor(private val service: AnimeApiService):
         ),
         pagingSourceFactory = { AnimePagingSource(service) }, initialKey = 1
     ).flow
+
+    fun fetchAnimeById(id: String) = doRequest {
+        service.fetchAnimeById(id)
+    }
 }

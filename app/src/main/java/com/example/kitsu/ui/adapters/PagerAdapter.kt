@@ -8,9 +8,10 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.kitsu.ui.fragments.anime.AnimeFragment
+import com.example.kitsu.ui.fragments.auth.AuthFragment
 import com.example.kitsu.ui.fragments.manga.MangaFragment
 
-class PagerAdapter(fm: FragmentActivity) : FragmentStateAdapter(fm) {
+class PagerAdapter(fm: Fragment) : FragmentStateAdapter(fm) {
     override fun getItemCount(): Int = 2
 
     override fun createFragment(position: Int): Fragment {

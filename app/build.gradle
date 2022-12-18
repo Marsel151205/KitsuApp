@@ -7,6 +7,9 @@ plugins {
 
     // Hilt
     id("com.google.dagger.hilt.android")
+
+    // Navigation SaveArgs
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {

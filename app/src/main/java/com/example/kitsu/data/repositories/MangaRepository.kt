@@ -16,4 +16,8 @@ class MangaRepository @Inject constructor(private val service: MangaApiService) 
         ),
         pagingSourceFactory = { MangaPagingSource(service) }, initialKey = 1
     ).flow
+
+    fun fetchMangaById(id: String) = doRequest {
+        service.fetchMangaById(id)
+    }
 }

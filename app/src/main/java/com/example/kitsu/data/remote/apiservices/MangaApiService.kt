@@ -4,13 +4,19 @@ import com.example.kitsu.models.manga.MangaModel
 import com.example.kitsu.models.manga.MangaResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MangaApiService {
 
-    @GET("manga")
+    @GET("edge/manga")
     suspend fun fetchManga(
         @Query("page[limit]")limit: Int = 20,
         @Query("page[offset]")offset: Int = 1
     ) : MangaResponse<MangaModel>
+
+    @GET("edge/manga/{id}")
+    suspend fun fetchMangaById(
+        @Path("id")id: String
+    ): MangaModel
 }
